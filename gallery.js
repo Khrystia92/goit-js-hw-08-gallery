@@ -7,12 +7,12 @@ const references = {
  closeButton: document.querySelector('lightbox__button'),
 };
 let activeIn
-const createGalleryMarkup = galleryItems.map(({preview, original, description}, index) => setGalleryItems(preview, original, description, index)).join('');
+const createGalleryMarkup = galleryItems.map(({ preview, original, description }, index) => setGalleryItems(preview, original, description, index)).join('');
 
-function setGalleryItems(preview, original, description) {
+function setGalleryItems(preview, original, description, index) {
   return `<li class = "gallery__item">
   <a class = "gallery__link" href = "${original}"> 
-  <img clas = "gallery__image"
+  <img class = "gallery__image"
   src = "${preview}"
   data-source = "${original}"
   data-index = "${index}"
